@@ -1,0 +1,6 @@
+{
+  "name": "edgenext-explorer/php-bridge",
+  "description": "Server bridge for the EdgeNext API explorer",
+  "repositories": [{ "type": "vcs", "url": "https://github.com/edgenextapisdk/edgenext-php" }],
+  "require": { "php": ">=8.2", "edgenextapisdk/sdk": "dev-main#bb4238e5be49a72ed1e98df71a8a8abc930ffa73" }
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "method": "GET",
+        "canonical": "GET\n/V4/firewall.policy.save/\nclient_ip=&client_userAgent=vector-agent&data%5Bdomain%5D=example.com&data%5Bname%5D=hello%20world&fromadmin=0&page=2&user_id=0\n4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "url": "https://api.example.com/V4/firewall.policy.save?client_ip=&client_userAgent=vector-agent&data%5Bdomain%5D=example.com&data%5Bname%5D=hello%20world&fromadmin=0&page=2&user_id=0",
+        "body": "[]",
+        "signature": "Bearer 2a7dc8d3bfbd0f624fcd20f79854bbb7641e5a0781f27da625befd6a7da174b4"
+    },
+    {
+        "method": "POST",
+        "canonical": "POST\n/V4/firewall.policy.save/\ndata%5Bdomain%5D=example.com&data%5Bname%5D=hello%20world&page=2\n0b785b56fc7f9bf7bfdf8c746043ca25d7b755c80ee287a3f2f959af0560f8bc",
+        "url": "https://api.example.com/V4/firewall.policy.save?data%5Bdomain%5D=example.com&data%5Bname%5D=hello%20world&page=2",
+        "body": "{\"user_id\":0,\"client_ip\":\"\",\"client_userAgent\":\"vector-agent\",\"fromadmin\":0,\"name\":\"\\u89c4\\u5219\\/one\",\"rules\":[{\"logic\":\"contains\",\"data\":[\"\\/login\"]}],\"enabled\":true}",
+        "signature": "Bearer aded3303d42e6d1d4d12e67bb9bb20cd196796d1fb07dbf8309d718143c3d58f"
+    }
+]

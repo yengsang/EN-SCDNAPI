@@ -1,6 +1,8 @@
 # EdgeNext API Explorer
 
-A responsive API workspace with a categorized endpoint dropdown, dynamic parameter forms, JSON/PHP previews, and real server-side request execution.
+A responsive API workspace with an expandable navigation tree, grouped endpoint dropdown, dynamic parameter forms, JSON/PHP previews, and real server-side request execution.
+
+Navigation follows the requested documentation hierarchy: SCDN with eleven modules; DNS with Domain Management, Record Management, and Batch Tasks; and a separate Operation Logs section. Subgroups and operation placement follow the documentation menu saved in `data/navigation.json`. The same hierarchy appears in dropdown group labels. All 313 operations remain accessible; operations referenced in multiple documentation groups appear in each relevant group.
 
 The built-in catalog comes from the official [EdgeNext API reference](https://home.console.edgenext.com/apidoc/v2/en/#overview) and its [OpenAPI definition](https://home.console.edgenext.com/apidoc/v2/en/openapi.json), retrieved on 2026-10-04. It contains all 313 documented operations across 279 paths and 33 categories. The page identifies this API as V5 despite the v2 documentation URL. The SDK section links to the same edgenextapisdk/edgenext-php repository. Required fields, choices, descriptions, and nested JSON definitions come from the official schema.
 

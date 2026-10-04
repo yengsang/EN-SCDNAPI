@@ -1,0 +1,630 @@
+[
+  {
+    "id": "scdn",
+    "title": "SCDN",
+    "open": true,
+    "modules": [
+      {
+        "id": "domain-management",
+        "title": "Domain Management",
+        "open": true,
+        "groups": [
+          {
+            "id": "domain",
+            "title": "Domains",
+            "operations": [
+              "GET /api/v5/domains",
+              "GET /api/v5/domains/simple",
+              "POST /api/v5/domains",
+              "POST /api/v5/domains_enable",
+              "POST /api/v5/domains_disable",
+              "POST /api/v5/domains/domains_export",
+              "PUT /api/v5/domains",
+              "DELETE /api/v5/domains"
+            ]
+          },
+          {
+            "id": "domain-base-settings",
+            "title": "Domain Configuration",
+            "operations": [
+              "GET /api/v5/domains/brief_config",
+              "GET /api/v5/domains/base_settings",
+              "GET /api/v5/domains/templates",
+              "GET /api/v5/packages/exclusive_resource",
+              "POST /V4/Web.Domain.batch.set.batch.update",
+              "PUT /api/v5/domains/base_settings"
+            ]
+          },
+          {
+            "id": "domain-origin",
+            "title": "Domain Origins",
+            "operations": [
+              "GET /api/v5/domains/origins",
+              "POST /api/v5/domains/origins",
+              "PUT /api/v5/domains/origins",
+              "DELETE /api/v5/domains/origins"
+            ]
+          },
+          {
+            "id": "origin-group",
+            "title": "Origin Groups",
+            "operations": [
+              "GET /api/v5/origin_groups",
+              "GET /api/v5/origin_groups/detail",
+              "GET /api/v5/origin_groups/all",
+              "GET /api/v5/origin_groups/bind_history/latest",
+              "POST /api/v5/origin_groups",
+              "POST /api/v5/origin_groups/domains_bind",
+              "POST /api/v5/origin_groups/copy",
+              "PUT /api/v5/origin_groups",
+              "DELETE /api/v5/origin_groups"
+            ]
+          },
+          {
+            "id": "domain-access",
+            "title": "Domain Access",
+            "operations": [
+              "POST /api/v5/domains/access_switch",
+              "POST /api/v5/domains/access_refresh",
+              "POST /api/v5/domains/nodes_switch"
+            ]
+          },
+          {
+            "id": "domain-certificate",
+            "title": "Domain Certificates",
+            "operations": [
+              "POST /api/v5/domains/bind_cert",
+              "POST /api/v5/domains/unbind_cert"
+            ]
+          },
+          {
+            "id": "domain-group",
+            "title": "Domain Groups",
+            "operations": [
+              "GET /api/v5/web.domain.group.list",
+              "GET /api/v5/web.domain.group.domain.list",
+              "GET /api/v5/web.domain.group.undistributed.domain.list",
+              "GET /api/v5/web.domain.group.info",
+              "POST /api/v5/web.domain.group.save",
+              "POST /api/v5/web.domain.group.del",
+              "POST /api/v5/web.domain.group.add",
+              "POST /api/v5/web.domain.group.domain.save",
+              "POST /api/v5/web.domain.group.move_domain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "certificate-management",
+        "title": "Certificate Management",
+        "groups": [
+          {
+            "id": "certificate-management",
+            "title": "Certificate Management",
+            "operations": [
+              "GET /api/v5/Web.ca.self.list",
+              "GET /api/v5/Web.ca.self.export",
+              "GET /api/v5/Web.ca.batch.operat",
+              "GET /api/v5/Web.ca.self",
+              "GET /api/v5/Web.ca.apply.getAddByNsSetting",
+              "POST /api/v5/Web.ca.self.add",
+              "POST /api/v5/Web.Domain.batch.ca.list",
+              "POST /api/v5/Web.ca.text.save",
+              "POST /api/v5/Web.ca.info.edit",
+              "POST /api/v5/Web.ca.batch.operat",
+              "POST /api/v5/Web.ca.self.editcaname",
+              "POST /api/v5/Web.ca.apply.add",
+              "DELETE /api/v5/Web.ca.self.del"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "exclusive-resource-package",
+        "title": "Resource Package Management",
+        "groups": [
+          {
+            "id": "exclusive-resource-package",
+            "title": "Resource Package Management",
+            "operations": [
+              "GET /api/v5/Tjkd.plus.package.list",
+              "GET /api/v5/Tjkd.plus.package.all",
+              "GET /api/v5/tjkd.plus.package.info",
+              "GET /api/v5/Tjkd.plus.package.ip.list",
+              "GET /api/v5/Tjkd.plus.package.overview",
+              "GET /api/v5/tjkd.plus.package.port.list",
+              "GET /api/v5/Tjkd.plus.package.domain.list",
+              "POST /api/v5/tjkd.plus.package.save"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "network-speed",
+        "title": "Speed and Network",
+        "groups": [
+          {
+            "id": "rule-template",
+            "title": "Template Management",
+            "operations": [
+              "GET /api/v5/ruletpls",
+              "GET /api/v5/ruletpls/detail",
+              "GET /api/v5/ruletpls/domains",
+              "GET /api/v5/rules/conditions",
+              "GET /api/v5/rules/dicts",
+              "POST /api/v5/ruletpls",
+              "PUT /api/v5/ruletpls",
+              "PUT /api/v5/ruletpls/domain/switch_tpl",
+              "DELETE /api/v5/ruletpls"
+            ]
+          },
+          {
+            "id": "cache-rule",
+            "title": "Cache Management",
+            "operations": [
+              "GET /api/v5/ruletpl/cache/rules",
+              "GET /api/v5/ruletpl/cache/global/conf",
+              "POST /api/v5/ruletpl/cache/rules",
+              "PUT /api/v5/ruletpl/cache/rule",
+              "PUT /api/v5/ruletpl/cache/rule_status",
+              "PUT /api/v5/ruletpl/cache/rule_sort",
+              "PUT /api/v5/ruletpl/cache/rule/conf",
+              "DELETE /api/v5/ruletpl/cache/rule"
+            ]
+          },
+          {
+            "id": "origin-https-performance",
+            "title": "Origin Fetch, HTTPS, and Performance Optimization",
+            "operations": [
+              "GET /api/v5/ruletpl/network_speed/rules",
+              "POST /api/v5/ruletpl/network_speed/rules",
+              "POST /api/v5/ruletpl/network_speed/get_conf",
+              "POST /api/v5/ruletpl/network_speed/get_blb_conf",
+              "PUT /api/v5/ruletpl/network_speed/rule",
+              "PUT /api/v5/ruletpl/network_speed/rule_sort",
+              "PUT /api/v5/ruletpl/network_speed/conf",
+              "DELETE /api/v5/ruletpl/network_speed/rule"
+            ]
+          },
+          {
+            "id": "cache-purge-preheat",
+            "title": "Cache Purge and Prefetch",
+            "operations": [
+              "GET /api/v5/Web.Domain.DashBoard.getCache",
+              "GET /api/v5/Web.Domain.DashBoard.cache.clean.list",
+              "GET /api/v5/Web.Domain.DashBoard.cache.clean.detail",
+              "GET /api/v5/Web.Domain.DashBoard.get.preheat.cache.list",
+              "GET /api/v5/Web.Domain.DashBoard.get.preheat.cache.new.list",
+              "POST /api/v5/Web.Domain.DashBoard.save.preheat.cache",
+              "PUT /api/v5/Web.Domain.DashBoard.saveCache"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "security-protection",
+        "title": "Security Protection",
+        "groups": [
+          {
+            "id": "template-management",
+            "title": "Template Management",
+            "operations": [
+              "GET /api/v5/security_protection/template/member/global",
+              "POST /api/v5/security_protection/template/domain",
+              "POST /api/v5/security_protection/template/search",
+              "POST /api/v5/security_protection/template/domain/bind/search",
+              "POST /api/v5/security_protection/template/domain/bind",
+              "POST /api/v5/security_protection/template",
+              "POST /api/v5/security_protection/template/batch/config",
+              "POST /api/v5/security_protection/template/domain/unbound/search",
+              "PUT /api/v5/security_protection/template",
+              "DELETE /api/v5/security_protection/template"
+            ]
+          },
+          {
+            "id": "security-protection",
+            "title": "Protection Configuration",
+            "operations": [
+              "GET /api/v5/security_protection/ddos/configs",
+              "GET /api/v5/security_protection/waf/rules",
+              "GET /api/v5/security_protection/template/iota",
+              "GET /api/v5/ruletpl/security_protection/rules",
+              "POST /api/v5/ruletpl/security_protection/get_conf",
+              "POST /api/v5/ruletpl/security_protection/rules",
+              "POST /api/v5/ruletpl/security_protection/rules/delete",
+              "POST /api/v5/ruletpl/security_protection/rules/sort",
+              "PUT /api/v5/security_protection/ddos/configs",
+              "PUT /api/v5/security_protection/waf/rules",
+              "PUT /api/v5/ruletpl/security_protection/conf",
+              "PUT /api/v5/ruletpl/security_protection/rules",
+              "PUT /api/v5/ruletpl/security_protection/rules/status"
+            ]
+          },
+          {
+            "id": "precise-access-control-policy-groups",
+            "title": "ACL Policy Sets",
+            "operations": [
+              "GET /api/v5/firewall.policyGroup.get_domainid",
+              "GET /api/v5/firewall.policy.get_groupId",
+              "GET /api/v5/firewall.policyGroup.tpl.get",
+              "POST /api/v5/firewall.policyGroup.save",
+              "POST /api/v5/firewall.policyGroup.stop",
+              "POST /api/v5/firewall.policyGroup.open",
+              "POST /api/v5/firewall.policyGroup.delete",
+              "POST /api/v5/firewall.policyGroup.sort",
+              "POST /api/v5/firewall.policy.tpl.add"
+            ]
+          },
+          {
+            "id": "precise-access-control-policies",
+            "title": "ACL Policies",
+            "operations": [
+              "GET /api/v5/firewall.pagecfg",
+              "GET /api/v5/firewall.pagecfg.hwws",
+              "GET /api/v5/firewall.policy.get_id",
+              "GET /api/v5/firewall.policy.get_code",
+              "GET /api/v5/firewall.policy.stats_domainid",
+              "GET /api/v5/firewall.policy.get_mainid",
+              "GET /api/v5/firewall.policy.get_packageid",
+              "POST /api/v5/firewall.policy.save",
+              "POST /api/v5/firewall.policy.open",
+              "POST /api/v5/firewall.policy.stop",
+              "POST /api/v5/firewall.policy.delete",
+              "POST /api/v5/firewall.policy.sort"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ban-management",
+        "title": "Ban Management",
+        "groups": [
+          {
+            "id": "ban-management",
+            "title": "Ban Management",
+            "operations": [
+              "GET /api/v5/ban/stats/current",
+              "GET /api/v5/ban/stats/history",
+              "GET /api/v5/ban/rules/top",
+              "GET /api/v5/ban/reasons",
+              "GET /api/v5/firewall.report.block.list",
+              "GET /api/v5/firewall.report.block.details",
+              "GET /api/v5/firewall.report.package.block.list",
+              "GET /api/v5/firewall.report.package.block.details",
+              "GET /api/v5/ban",
+              "GET /api/v5/ban/histories",
+              "GET /api/v5/rule/infos",
+              "POST /api/v5/ban/unban"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rule-management",
+        "title": "Rule Management",
+        "flattenSingleGroup": false,
+        "groups": [
+          {
+            "id": "conditional-origin",
+            "title": "Conditional Origin Management",
+            "operations": [
+              "GET /api/v5/engine.rule.list",
+              "GET /api/v5/source.condition.sourceRuleList",
+              "POST /api/v5/engine.rule.add",
+              "POST /api/v5/engine.rule.delete",
+              "POST /api/v5/engine.rule.update",
+              "POST /api/v5/engine.rule.updateStatus",
+              "POST /api/v5/engine.rule.copy",
+              "POST /api/v5/source.condition.addSourceRule",
+              "POST /api/v5/source.condition.updateSourceRule",
+              "POST /api/v5/source.condition.deleteSourceRule",
+              "POST /api/v5/source.condition.updateSourceRuleStatus",
+              "POST /api/v5/source.condition.sortSourceRule"
+            ]
+          },
+          {
+            "id": "ip-intelligence",
+            "title": "IP Intelligence",
+            "groups": [
+              {
+                "id": "ip-list",
+                "title": "IP Lists",
+                "operations": [
+                  "GET /api/v5/user.ip.add",
+                  "GET /api/v5/user.ip.save",
+                  "GET /api/v5/user.ip.list",
+                  "POST /api/v5/user.ip.copy",
+                  "POST /api/v5/user.ip.add",
+                  "PUT /api/v5/user.ip.save",
+                  "DELETE /api/v5/user.ip.del"
+                ]
+              },
+              {
+                "id": "ip-list-items",
+                "title": "IP List Entries",
+                "operations": [
+                  "GET /api/v5/user.ip.item.list",
+                  "POST /api/v5/user.ip.item.text.save",
+                  "POST /api/v5/user.ip.item.file.save",
+                  "POST /api/v5/user.ip.item.all",
+                  "PUT /api/v5/user.ip.item.edit",
+                  "DELETE /api/v5/user.ip.item.del"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "waf-strategy",
+            "title": "WAF Policies",
+            "operations": [
+              "GET /api/v5/strategy.list",
+              "GET /api/v5/strategy.copiable.list",
+              "GET /api/v5/strategy.quotable.list",
+              "GET /api/v5/strategy.list.user.owned",
+              "GET /api/v5/strategy.detail",
+              "GET /api/v5/strategy.dict",
+              "GET /api/v5/strategy.binding",
+              "GET /api/v5/domains.own.strategy",
+              "GET /api/v5/templates.own.strategy",
+              "POST /api/v5/strategy.create",
+              "POST /api/v5/strategy.update",
+              "POST /api/v5/strategy.set.default",
+              "POST /api/v5/strategy.config.update",
+              "POST /api/v5/strategy.config.apply.to.strategies",
+              "POST /api/v5/strategy.quote",
+              "POST /api/v5/strategy.config.publish",
+              "POST /api/v5/strategy.binding.add",
+              "POST /api/v5/strategy.binding.delete",
+              "POST /api/v5/domain.strategy.switch",
+              "POST /api/v5/domain.strategy.update",
+              "POST /api/v5/strategy.quote.to.domain",
+              "POST /api/v5/strategy.config.apply.to.domains",
+              "POST /api/v5/strategy.binding.add.default",
+              "DELETE /api/v5/strategy.delete"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "statistics",
+        "title": "Analytics",
+        "groups": [
+          {
+            "id": "traffic-management",
+            "title": "Traffic Management",
+            "operations": [
+              "GET /api/v5/statistics/traffic/traffic_pack_detail",
+              "GET /api/v5/statistics/traffic/billing_summary"
+            ]
+          },
+          {
+            "id": "business-report",
+            "title": "Business Reports",
+            "operations": [
+              "POST /api/v5/stats_data.cdn.domain.uaisp.distribute",
+              "POST /api/v5/stats_data.cdn.domain.country.distribute",
+              "POST /api/v5/stats_data.cdn.domain.province.distribute",
+              "POST /api/v5/stats_data.cdn.domain.status.distribute",
+              "POST /api/v5/stats_data.cdn.domain.node.flow.bandwidth",
+              "POST /api/v5/stats_data.cdn.domain.node.flow.bandwidth.cn2",
+              "POST /api/v5/stats_data.cdn.domain.node.flow.bandwidth.node",
+              "POST /api/v5/stats_data.cdn.domain.times",
+              "POST /api/v5/stats_data.cdn.domain.qps",
+              "POST /api/v5/stats_data.cdn.domain.flow.line",
+              "POST /api/v5/stats_data.cdn.domain.bandwidth.line",
+              "POST /api/v5/stats_data.cdn.domain.bandwidth_95",
+              "POST /api/v5/stats_data.cdn.domain.pvtimes",
+              "POST /api/v5/stats_data.cdn.domain.flow.top",
+              "POST /api/v5/stats_data.cdn.domain.bandwidth.top",
+              "POST /api/v5/stats_data.cdn.domain.times.top",
+              "POST /api/v5/stats_data.cdn.domain.times.top.es",
+              "POST /api/v5/stats_data.cdn.domain.url.top",
+              "POST /api/v5/stats_data.cdn.domain.referer.top",
+              "POST /api/v5/stats_data.cdn.domain.status.top.download",
+              "POST /api/v5/stats_data.cdn.domain.bandwidth.download",
+              "POST /api/v5/stats_data.cdn.domain.flow.download"
+            ]
+          },
+          {
+            "id": "security-report",
+            "title": "Security Analytics",
+            "operations": [
+              "POST /api/v5/stats_data.cc.qps.max",
+              "POST /api/v5/stats_data.cc.attack.times",
+              "POST /api/v5/stats_data.cc.times.line",
+              "POST /api/v5/stats_data.cc.report.stats",
+              "POST /api/v5/stats_data.waf.attack.times",
+              "POST /api/v5/stats_data.waf.report.stats",
+              "POST /api/v5/stats_data.waf.webshell.event.list",
+              "POST /api/v5/stats_data.waf.webshell.event.detail",
+              "POST /api/v5/stats_data.waf.attack.event.list",
+              "POST /api/v5/stats_data.waf.attack.event.detail",
+              "POST /api/v5/stats_data.waf.scan.event.list",
+              "POST /api/v5/stats_data.waf.scan.event.detail",
+              "POST /api/v5/stats_data.waf.type.line"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "log-management",
+        "title": "Log Management",
+        "groups": [
+          {
+            "id": "log-search",
+            "title": "Log Retrieval",
+            "operations": [
+              "GET /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.field",
+              "GET /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.const",
+              "GET /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.sql.get",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.risk.line",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.list",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.detail",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.sql.create",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.sql.update",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.sql.delete",
+              "POST /api/v5/Web.Domain.DashBoard.get.log.retrieval.waf.attack.log.sql.list"
+            ]
+          },
+          {
+            "id": "log-download",
+            "title": "Log Download",
+            "operations": [
+              "GET /api/v5/soc.log.download.task.list",
+              "GET /api/v5/soc.log.download.fields",
+              "GET /api/v5/soc.log.download.template.list",
+              "GET /api/v5/soc.log.download.template.domain.list",
+              "GET /api/v5/soc.log.download.template.all",
+              "GET /api/v5/soc.log.download.template.group.all",
+              "POST /api/v5/soc.log.download.task.list",
+              "POST /api/v5/soc.log.download.task.add",
+              "POST /api/v5/soc.log.download.task.cancel",
+              "POST /api/v5/soc.log.download.task.regenerate",
+              "POST /api/v5/soc.log.download.template.list",
+              "POST /api/v5/soc.log.download.template.add",
+              "POST /api/v5/soc.log.download.template.save",
+              "POST /api/v5/soc.log.download.template.change.status",
+              "POST /api/v5/soc.log.download.template.batch.change.status",
+              "POST /api/v5/soc.log.download.template.all",
+              "POST /api/v5/soc.log.download.template.group.all",
+              "DELETE /api/v5/soc.log.download.task.batch.cancel",
+              "DELETE /api/v5/soc.log.download.task.del",
+              "DELETE /api/v5/soc.log.download.task.batch.del",
+              "DELETE /api/v5/soc.log.download.template.del",
+              "DELETE /api/v5/soc.log.download.template.batch.del"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tcp-forward-rule",
+        "title": "Layer 4 Proxy",
+        "groups": [
+          {
+            "id": "tcp-forward-rule",
+            "title": "Forwarding Rules",
+            "operations": [
+              "GET /api/v5/Tjkd.plus.forward.rule.list",
+              "GET /api/v5/Tjkd.plus.domain.list",
+              "POST /api/v5/Tjkd.plus.forward.rule.save",
+              "POST /api/v5/Tjkd.plus.forward.rule.batch.add",
+              "POST /api/v5/Tjkd.plus.forward.rule.batch.save",
+              "POST /api/v5/Tjkd.plus.forward.rule.batch.info",
+              "POST /api/v5/Tjkd.plus.domain.add",
+              "DELETE /api/v5/Tjkd.plus.forward.rule.del"
+            ]
+          },
+          {
+            "id": "tcp-report",
+            "title": "Analytics",
+            "operations": [
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.line",
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.Province.top",
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.Country.top",
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.top",
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.conversation",
+              "POST /api/v5/statistic.tjkd.plus.package.max_ddos_cc",
+              "POST /api/v5/stats_data.tcp.bandwidth",
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.flaw",
+              "POST /api/v5/statistic.tjkd.plus.tcp.cc.avg.sessiontime.line"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "common-api",
+        "title": "Public APIs",
+        "groups": [
+          {
+            "id": "common-api",
+            "title": "Public APIs",
+            "operations": [
+              "GET /api/v5/task/list",
+              "GET /api/v5/subtask/list",
+              "GET /api/v5/ip.article.list",
+              "GET /api/v5/clouds/oss"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dns",
+    "title": "DNS",
+    "modules": [
+      {
+        "id": "domain",
+        "title": "Domain Management",
+        "groups": [
+          {
+            "id": "dns-domain-name",
+            "title": "Domain Management",
+            "operations": [
+              "GET /api/v5/sdns/domains",
+              "GET /api/v5/sdns/domains/detail",
+              "GET /api/v5/sdns/domains/stat",
+              "GET /api/v5/sdns/domains/servers",
+              "POST /api/v5/sdns/domains",
+              "POST /api/v5/sdns/domains_batch_add",
+              "DELETE /api/v5/sdns/domains_batch_delete"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "record",
+        "title": "Record Management",
+        "groups": [
+          {
+            "id": "dns-domain-records-name",
+            "title": "Record Management",
+            "operations": [
+              "GET /api/v5/sdns/records",
+              "GET /api/v5/sdns/types",
+              "GET /api/v5/sdns/lines",
+              "POST /api/v5/sdns/records",
+              "POST /api/v5/sdns/records_batch_add",
+              "POST /api/v5/sdns/records_batch_pause",
+              "POST /api/v5/sdns/records_batch_enable",
+              "POST /api/v5/sdns/records_import",
+              "POST /api/v5/sdns/records_export",
+              "PUT /api/v5/sdns/records",
+              "DELETE /api/v5/sdns/records",
+              "DELETE /api/v5/sdns/records_batch_delete"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dns-batch-task",
+        "title": "Batch Tasks",
+        "groups": [
+          {
+            "id": "dns-batch-task",
+            "title": "Batch Tasks",
+            "operations": [
+              "GET /api/v5/sdns/tasks",
+              "GET /api/v5/sdns/tasks/detail"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "operation-logs",
+    "title": "Operation Logs",
+    "groups": [
+      {
+        "id": "api-group-oplog",
+        "title": "Operation Logs",
+        "operations": [
+          "GET /api/v5/oplog.info",
+          "GET /api/v5/oplog.map",
+          "GET /api/v5/oplog.list"
+        ]
+      }
+    ]
+  }
+]

@@ -42,7 +42,9 @@ try {
     $params = json_decode($raw, true, 512, JSON_THROW_ON_ERROR);
     $method = strtolower($params['method']);
     $response = $sdk->$method([
-        'url' => $params['path'],
+        'url' => str_starts_with($params['path'], '/')
+            ? 'https://'.$parts['host'].(isset($parts['port']) ? ':'.$parts['port'] : '').$params['path']
+            : $params['path'],
         'query' => $params['query'],
         'body' => $params['body'],
         'timeout' => 10,

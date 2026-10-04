@@ -1,0 +1,9 @@
+{
+  "url": "https://home.console.edgenext.com/apidoc/v2/en/openapi.json",
+  "retrieved": "2026-10-04",
+  "version": "5.0.0",
+  "server": "https://apiv4.lalcsafe.com",
+  "paths": 279,
+  "operations": 313,
+  "categories": 33
+}

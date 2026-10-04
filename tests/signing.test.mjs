@@ -12,6 +12,11 @@ for(const expected of vectors) test('matches the actual PHP SDK signer: '+expect
 });
 test('rejects endpoint URL injection and insecure configuration',async()=>{
   const base={baseUrl:'https://api.example.com/V4/',appId:'test',secret:'test',method:'GET'};
-  for(const path of ['https://attacker.example','../secret','endpoint?token=1','foo/{id}']) await assert.rejects(signRequest({...base,path}));
+  for(const path of ['https://attacker.example','//attacker.example','../secret','endpoint?token=1','foo/{id}']) await assert.rejects(signRequest({...base,path}));
   await assert.rejects(signRequest({...base,baseUrl:'http://api.example.com/',path:'endpoint'}));
+});
+test('official V5 paths use the configured API origin without duplicate version prefixes',async()=>{
+  const signed=await signRequest({baseUrl:'https://apiv4.lalcsafe.com/V4/',appId:'test',secret:'test',method:'GET',path:'/api/v5/rules/conditions'});
+  assert.equal(new URL(signed.url).origin,'https://apiv4.lalcsafe.com');
+  assert.equal(new URL(signed.url).pathname,'/api/v5/rules/conditions');
 });

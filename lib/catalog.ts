@@ -1,7 +1,8 @@
+import officialCatalog from './edgenext-catalog.json';
 export type Field = { name: string; label?: string; type: string; required?: boolean; description?: string; example?: unknown; enum?: unknown[]; location: 'query' | 'body' | 'path'; schema?: Record<string, unknown> };
 export type Endpoint = { id: string; category: string; name: string; path: string; method: string; description: string; fields: Field[]; source: string; example?: boolean; bodyRequired?: boolean };
 const source = 'https://github.com/edgenextapisdk/edgenext-php/blob/main/tests/FirewallTest.php';
-export const endpoints: Endpoint[] = [
+export const sdkExamples: Endpoint[] = [
   { id: 'policy-group', category: 'Firewall / Rule sets', name: 'Save a rule set', path: 'firewall.policyGroup.save', method: 'POST', description: 'Create a precise access-control rule set. Parameters are taken from the SDK example; the example does not define formal requiredness.', source, example: true, fields: [
     {name:'name',label:'Rule set name',type:'string',description:'Name of the rule set.',example:'example',location:'body'},
     {name:'remark',label:'Remark',type:'string',description:'A note about this rule set.',location:'body'},
@@ -70,3 +71,5 @@ export function importCatalog(input: unknown): Endpoint[] {
   if(!result.length) throw new Error('No supported API operations were found.');
   return result;
 }
+
+export const endpoints = officialCatalog as Endpoint[];

@@ -26,7 +26,7 @@ $appId = getenv('SDK_APP_ID');
 $secret = getenv('SDK_APP_SECRET');
 if (!$base || !$appId || !$secret) fail(503, 'EdgeNext server credentials are not configured.');
 $parts = parse_url($base);
-if (!$parts || ($parts['scheme'] ?? '') !== 'https' || isset($parts['user'], $parts['pass']) || isset($parts['query']) || isset($parts['fragment'])) fail(503, 'Configure a valid HTTPS API base URL.');
+if (!$parts || ($parts['scheme'] ?? '') !== 'https' || isset($parts['user']) || isset($parts['pass']) || isset($parts['query']) || isset($parts['fragment'])) fail(503, 'Configure a valid HTTPS API base URL.');
 $autoload = dirname(__DIR__).'/vendor/autoload.php';
 if (!is_file($autoload)) fail(503, 'Install the PHP SDK with Composer first.');
 require $autoload;

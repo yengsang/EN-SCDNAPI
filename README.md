@@ -4,7 +4,7 @@ This project is prepared for private self-hosting on your AWS account. It serves
 
 All 313 documented operations and the requested SCDN, DNS, and Operation Logs hierarchy are included.
 
-See [deployment from GitHub to your existing EC2 server](deploy/aws/EXISTING-EC2.md) for SSH access, configuration, and updates. [Other AWS hosting options](deploy/aws/README.md) cover Session Manager, Secrets Manager, local development, and validation.
+See [deployment from GitHub to your existing EC2 server](deploy/aws/EXISTING-EC2.md) for HTTPS GitHub access, installation at `/var/www/EN-SCDNAPI`, configuration, and updates. [Other AWS hosting options](deploy/aws/README.md) cover Session Manager, Secrets Manager, local development, and validation.
 
 Use Node 22.13+, PHP 8.2+ with cURL, and Docker Compose 2.30+ for container deployment. `npm run dev` starts the local PHP API and frontend. `npm run build` generates the standalone frontend.
 

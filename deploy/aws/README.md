@@ -1,5 +1,7 @@
 # Private hosting on your AWS account
 
+For the existing EC2 server hosting `/var/www/contact`, use [HTTPS GitHub deployment](EXISTING-EC2.md) to install the explorer at `/var/www/EN-SCDNAPI` with server-local credentials.
+
 The application runs as a single PHP/Apache container, serving the built React interface and calling the EdgeNext PHP SDK directly. It keeps all 313 operations and the requested SCDN/DNS/Operation Logs grouping. It does not require ChatGPT sign-in, Sites hosting, Cloudflare Workers, Composer, or a database.
 
 ## Default: private EC2 access with Session Manager

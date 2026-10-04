@@ -1,5 +1,7 @@
 # Deploy the private EdgeNext explorer to EC2
 
+For your existing server with Contact at `/var/www/contact`, follow [the HTTPS GitHub deployment guide](EXISTING-EC2.md), which installs this project at `/var/www/EN-SCDNAPI`. The steps below describe the alternative of creating a new instance with Session Manager access.
+
 This guide uses Amazon Linux 2023 (x86_64), Docker, Secrets Manager, and Session Manager. The application serves its React interface and calls the EdgeNext PHP SDK from one container. AWS IAM controls access through a private tunnel. It has no separate application login, so only grant tunnel access to people allowed to use your EdgeNext account.
 
 Replace YOUR_REGION, YOUR_BUCKET, YOUR_INSTANCE_ID, and YOUR_SECRET_ARN throughout. Use one AWS Region for the instance, bucket, and secret.

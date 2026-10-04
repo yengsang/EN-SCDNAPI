@@ -85,6 +85,8 @@ curl --fail http://127.0.0.1:8080/healthz
 
 Configure a separate site/subdomain in your existing reverse proxy, forwarding to `127.0.0.1:8080` (or your chosen port). Use HTTPS and restrict access through your VPN, an IP allowlist, or proxy authentication. The application has no built-in login; `APP_ORIGIN` checks are not authentication. Keep the Compose listener bound to loopback.
 
+For this server's Nginx and `enscdnapi.yengsang.com`, follow [the HTTPS and browser-login setup](NGINX-GUIDE.md).
+
 ## Update from GitHub
 
 After new code is pushed, SSH into EC2 and run:

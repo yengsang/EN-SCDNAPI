@@ -70,6 +70,8 @@ Set this line, keeping your EdgeNext credentials in the same file:
 APP_ORIGIN=https://enscdnapi.yengsang.com
 ```
 
+If a second domain points to this same application, use `APP_ORIGINS=https://enscdnapi.yengsang.com,https://your-second-domain.example` instead, replacing the second address. This nonempty list overrides `APP_ORIGIN`; include all allowed browser origins and protect each domain with HTTPS and authentication.
+
 Then apply the environment change:
 
 ```bash

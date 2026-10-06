@@ -75,6 +75,14 @@ SDK_APP_SECRET=your_edgenext_app_secret
 
 Use the exact browser origin with no trailing slash. Credentials stay on EC2 and are excluded from Git and the Docker build context.
 
+To use the same app from multiple domains, set a comma-separated list in `.env.aws`:
+
+```dotenv
+APP_ORIGINS=https://enscdnapi.yengsang.com,https://your-second-domain.example
+```
+
+Replace the second origin with your actual address. When nonempty, `APP_ORIGINS` overrides `APP_ORIGIN`, so include every allowed domain with its exact scheme and port if nonstandard. Wildcards are not supported. Both domains need their own HTTPS/reverse-proxy configuration and access protection. Recreate the container after editing the file.
+
 Check that port 8080 is available. If it is occupied, edit the host port in `compose.yaml`, for example `127.0.0.1:8082:80`, and point the reverse proxy to that port.
 
 ```bash

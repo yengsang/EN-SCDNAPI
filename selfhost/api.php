@@ -14,8 +14,9 @@ function handle_api(string $path, string $method, array $headers, string $raw, ?
     }
     if ($path!=='/api/request') return api_error(404,'Unknown API route.');
     if ($method!=='POST') return api_error(405,'Only POST is supported.');
-    $origin=rtrim(getenv('APP_ORIGIN') ?: 'http://localhost:8080','/');
-    if (($headers['origin'] ?? '')!==$origin || ($headers['sec-fetch-site'] ?? '')==='cross-site') return api_error(403,'Requests must come from the configured APP_ORIGIN.');
+    $configuredOrigins=getenv('APP_ORIGINS') ?: (getenv('APP_ORIGIN') ?: 'http://localhost:8080');
+    $origins=array_values(array_filter(array_map(static fn(string $origin): string => rtrim(trim($origin),'/'),explode(',',$configuredOrigins)),static fn(string $origin): bool => $origin!==''));
+    if (!in_array($headers['origin'] ?? '',$origins,true) || ($headers['sec-fetch-site'] ?? '')==='cross-site') return api_error(403,'Requests must come from an origin listed in APP_ORIGIN or APP_ORIGINS.');
     if (!str_starts_with(strtolower($headers['content-type'] ?? ''),'application/json')) return api_error(415,'Use application/json.');
     if (strlen($raw)>131072) return api_error(413,'Request exceeds 128 KB.');
     try { $input=json_decode($raw,false,512,JSON_THROW_ON_ERROR); } catch (Throwable $e) { return api_error(400,'Invalid JSON request.'); }

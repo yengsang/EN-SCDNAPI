@@ -10,4 +10,6 @@ Use Node 22.13+, PHP 8.2+ with cURL, and Docker Compose 2.30+ for container depl
 
 On your server, copy `deploy/aws/.env.example` to `.env.aws`, configure the EdgeNext credentials and `APP_ORIGIN` to match your browser's origin, then run `docker compose up -d --build`. Credentials belong on the server and are excluded from Git and Docker build context. After changing credentials, run `docker compose up -d --force-recreate`. The application has no built-in login; restrict access at the reverse proxy or network.
 
+For multiple domains, set `APP_ORIGINS` to their comma-separated exact origins. A nonempty list overrides `APP_ORIGIN`. Apply environment changes by recreating the container, and protect access through every domain.
+
 Official catalog source: https://home.console.edgenext.com/apidoc/v2/en/openapi.json, retrieved 2026-10-04. The pinned SDK source and MIT license are in `selfhost/sdk`. Upstream source files are unmodified; the application uses its supported transport interface.
